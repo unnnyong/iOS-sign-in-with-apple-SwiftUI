@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  WWDC2019
 //
 //  Created by Eunyeong Kim on 2019/07/05.
@@ -8,10 +8,26 @@
 
 import SwiftUI
 
-struct ContentView : View {
+struct MainView : View {
+
+    let button = Button(action: {
+        print("hello")
+    }, label: {
+        Text("Button")
+    })
+
     var body: some View {
-        Text("Hello World")
+        VStack {
+            Text("Hello World")
+            Text("Placeholder")
+            button
+        }
     }
+
+}
+
+private extension ContentView {
+
 }
 
 #if DEBUG
