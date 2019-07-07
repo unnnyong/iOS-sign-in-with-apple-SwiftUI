@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E932259C22CF931E0069003C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E932259B22CF931E0069003C /* Color.xcassets */; };
+		E93225A122D0D4580069003C /* SignInButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93225A022D0D4580069003C /* SignInButtonView.swift */; };
+		E93225A622D0DD6C0069003C /* DarkModeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93225A522D0DD6C0069003C /* DarkModeManager.swift */; };
 		E99D21EB22CF928B000CABCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D21EA22CF928B000CABCA /* AppDelegate.swift */; };
 		E99D21ED22CF928B000CABCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D21EC22CF928B000CABCA /* SceneDelegate.swift */; };
 		E99D21EF22CF928B000CABCA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D21EE22CF928B000CABCA /* MainView.swift */; };
@@ -29,6 +31,9 @@
 
 /* Begin PBXFileReference section */
 		E932259B22CF931E0069003C /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		E932259F22D0A3620069003C /* WWDC2019.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WWDC2019.entitlements; sourceTree = "<group>"; };
+		E93225A022D0D4580069003C /* SignInButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButtonView.swift; sourceTree = "<group>"; };
+		E93225A522D0DD6C0069003C /* DarkModeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeManager.swift; sourceTree = "<group>"; };
 		E99D21E722CF928B000CABCA /* WWDC2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWDC2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99D21EA22CF928B000CABCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E99D21EC22CF928B000CABCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +65,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E93225A222D0D4880069003C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E99D21EE22CF928B000CABCA /* MainView.swift */,
+				E93225A022D0D4580069003C /* SignInButtonView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E93225A322D0D4940069003C /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				E99D21EA22CF928B000CABCA /* AppDelegate.swift */,
+				E99D21EC22CF928B000CABCA /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		E93225A422D0D4A00069003C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E99D21F022CF928D000CABCA /* Assets.xcassets */,
+				E932259B22CF931E0069003C /* Color.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		E99D21DE22CF928B000CABCA = {
 			isa = PBXGroup;
 			children = (
@@ -81,11 +113,11 @@
 		E99D21E922CF928B000CABCA /* WWDC2019 */ = {
 			isa = PBXGroup;
 			children = (
-				E99D21EA22CF928B000CABCA /* AppDelegate.swift */,
-				E99D21EC22CF928B000CABCA /* SceneDelegate.swift */,
-				E99D21EE22CF928B000CABCA /* MainView.swift */,
-				E99D21F022CF928D000CABCA /* Assets.xcassets */,
-				E932259B22CF931E0069003C /* Color.xcassets */,
+				E932259F22D0A3620069003C /* WWDC2019.entitlements */,
+				E93225A322D0D4940069003C /* Delegate */,
+				E93225A522D0DD6C0069003C /* DarkModeManager.swift */,
+				E93225A222D0D4880069003C /* View */,
+				E93225A422D0D4A00069003C /* Assets */,
 				E99D21F522CF928D000CABCA /* LaunchScreen.storyboard */,
 				E99D21F822CF928D000CABCA /* Info.plist */,
 				E99D21F222CF928D000CABCA /* Preview Content */,
@@ -212,8 +244,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E93225A122D0D4580069003C /* SignInButtonView.swift in Sources */,
 				E99D21EB22CF928B000CABCA /* AppDelegate.swift in Sources */,
 				E99D21ED22CF928B000CABCA /* SceneDelegate.swift in Sources */,
+				E93225A622D0DD6C0069003C /* DarkModeManager.swift in Sources */,
 				E99D21EF22CF928B000CABCA /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WWDC2019/WWDC2019.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "WWDC2019/Preview\\ Content";
 				DEVELOPMENT_TEAM = 8QZ5U5MR4E;
@@ -386,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WWDC2019/WWDC2019.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "WWDC2019/Preview\\ Content";
 				DEVELOPMENT_TEAM = 8QZ5U5MR4E;
